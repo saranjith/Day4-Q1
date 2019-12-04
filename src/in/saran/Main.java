@@ -14,21 +14,18 @@ public class Main {
         int count = 0;
 
 
-        for(int i=rangeStart;i<=rangeEnd;i++){
-            if(isInRightOrder(i)){
+        for(int i=rangeStart;i<=rangeEnd;i++) {
+            if (isInRightOrder(i)) {
 
-                for(int j=0;j<Integer.toString(i).length()-1;j++) {
+                for (int j = 0; j < Integer.toString(i).length() - 1; j++) {
                     if (Character.toString(Integer.toString(i).charAt(j)).equals(Character.toString(Integer.toString(i).charAt(j + 1)))) {
-                        System.out.println(i);
                         count++;
                         j = Integer.toString(i).length() - 1;
                     }
-
                 }
-
-                }
+            }
         }
-        System.out.println("testing isTidy "+count);
+        System.out.println("There are "+count+" different passwords");
     }
 
     static boolean isInRightOrder(int number)
@@ -42,7 +39,6 @@ public class Main {
                 return false;
             c = rem;
         }
-
         return true;
     }
 
